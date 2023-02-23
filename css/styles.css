@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@1,500&display=swap');
+:root{
+    --bg-color: rgb(219, 203, 203);
+    --text-color: antiquewhite;
+    --font-size: 1.4em;
+    --bg-DarkMode: rgb(85, 75, 75);
+    --ft-family: 'Shantell Sans', cursive;
+    --h2-darkmode: antiquewhite;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    animation: backgroundDark01 3s ease;
+    font-family: var(--ft-family);
+}
+@keyframes backgroundDark01 {
+    0%{
+        background-color:var(--bg-DarkMode);
+    }
+    100%{
+        background-color: var(--bg-color);
+    }
+}
+main{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+main nav{
+    display: flex;
+    width: 100vw;
+    height: 3.5rem;
+    background: rgba(128, 128, 128, 0.877);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 10px rgb(112, 103, 103);
+    animation: animateNavDark01 3s ease;
+}
+@keyframes animateNavDark01 {
+    0%{
+        background: rgb(65, 62, 62);
+        box-shadow: 0 0 10px whitesmoke;
+    }
+    100%{
+        background: rgba(128, 128, 128, 0.877);
+        box-shadow: 0 0 10px rgb(112, 103, 103);
+    }
+}
+main nav ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--font-size);
+    transition: all .5s;
+}
+main nav ul li a:hover{
+    color: rgb(255, 255, 255);
+}
+main nav ul, .darkMode{
+    display: flex;
+    gap: 2em;
+    width: 50%;
+    flex-wrap: wrap;
+}
+main nav .darkMode{
+    align-items: center;
+    justify-content: end;
+}
+main nav .darkMode{
+    width: 45%;
+}
+@media (max-width: 1190px) {
+    main .nav{
+        display: none;
+    }
+    .bars{
+        visibility: visible;
+        display: flex;
+        width: 50%;
+        color: antiquewhite;
+    }
+    .perfil{
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        height: 4em;
+    }
+}
+.bars{
+    visibility: hidden;
+    color: antiquewhite;
+}
+main nav ul li{
+    list-style: none;
+    display: flex;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    transition: all .5s;
+}
+main nav ul li:hover{
+    border-bottom: 1px solid whitesmoke;
+    box-shadow: 0 3px 3px rgb(227, 235, 227);
+}
+nav .darkMode .C_Button{
+    display: flex;
+    background: rgb(88, 85, 85);
+    border-radius: 20px;
+}
+nav .darkMode .C_Button button{
+    font-size: 2em;
+    background: none;
+    border: none;
+    border-radius: 18px;
+    margin: 0;
+    cursor: pointer;
+    color: var(--text-color);
+}
+nav .darkMode .C_Button .sun{
+    background: whitesmoke;
+    color: black;
+}
+
+/* !DarkMode */
+
+/* body Dark */
+.bodyDarkMode{
+    background: var(--bg-DarkMode);
+    animation: backgroundDark 3s ease;
+}
+@keyframes backgroundDark {
+    0%{
+        background-color: var(--bg-color);
+    }
+    100%{
+        background-color:var(--bg-DarkMode);
+    }
+}
+.moonDark{
+    background: var(--bg-DarkMode);
+    color: antiquewhite;
+}
+.navDark{
+    animation: animateNavDark 3s both;
+}
+@keyframes animateNavDark {
+    0%{
+        background: rgba(128, 128, 128, 0.877);
+        box-shadow: 0 0 10px rgb(112, 103, 103);
+    }
+    100%{
+        background: rgb(65, 62, 62);
+        box-shadow: 0 0 10px whitesmoke;
+    }
+}
+img{
+    width: 350px;
+    height: 300px;
+    animation: animateImg 9s infinite ease;
+    box-shadow: 0 0 10px grey;
+}
+@keyframes animateImg {
+    0%{
+        border-radius: 30% 50% 40% 50%;
+    }
+    50%{
+        border-radius: 60% 30% 30% 25%;
+    }
+    75%{
+        border-radius: 40% 60% 20% 40%;
+    }
+    100%{
+        border-radius: 30% 50% 40% 50%;
+    }
+}
+
+
+
+/*! PerfilInfo  */
+.perfil{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4em;
+}
+.perfil .perfilInfo{
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    justify-content: center;
+    align-items: center;
+}
+.perfil .perfilInfo h2{
+    font-size: 2em;
+    color: rgb(50, 54, 56);
+    margin: 0;
+    animation: ModeH2 3s ease;
+}
+@keyframes ModeH2 {
+    0%{
+        color: var(--h2-darkmode);
+    }
+    100%{
+        color: rgb(50, 54, 56);
+    }
+}
+.perfil .perfilInfo .h2Dark{
+    color: var(--h2-darkmode) ;
+    animation: darkModeH2 3s ease;
+}
+@keyframes darkModeH2 {
+    0%{
+        color: rgb(50, 54, 56);
+    }
+    100%{
+        color: var(--h2-darkmode);
+    }
+}
+.perfil .perfilInfo h2, p{
+    text-align: center;
+    font-weight: bold;
+}
+.perfil .perfilInfo p{
+    color: rgb(92, 92, 92);
+    animation: ModeP 3s ease;
+}
+@keyframes ModeP {
+    0%{
+        color: rgb(218, 188, 194);
+    }
+    100%{
+        color: rgb(92, 92, 92);
+    }
+}
+.perfil .perfilInfo .darkModeP{
+    color: rgb(218, 188, 194);
+    animation: darkModeP 3s ease;
+}
+@keyframes darkModeP {
+    0%{
+        color: rgb(92, 92, 92);
+    }
+    100%{
+        color: rgb(218, 188, 194);
+    }
+}
+
+/* ! Habilidades */
+.habilidades{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.habilidades .C_habilidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.habilidades .C_habilidades .habilities{
+    display: flex;
+    gap: 1.5em;
+}
+.habilidades .C_habilidades h1{
+    color: rgb(50, 54, 56);
+    animation: modeh1 3s ease;
+}
+@keyframes modeh1 {
+    0%{
+        color: rgb(218, 188, 194);
+    }
+    100%{
+        color: rgb(50, 54, 56);
+    }
+}
+.habilidades .C_habilidades .darkModeh1{
+    color: var(--h2-darkmode);
+    animation: darkModeh1 3s ease;
+}
+@keyframes darkModeh1 {
+    0%{
+        color: rgb(50, 54, 56);
+    }
+    100%{
+        color: var(--h2-darkmode);
+    }
+}
+.habilidades .C_habilidades .habilities .backend, .frontend {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+}
+.habilidades .C_habilidades .habilities .backend .span, .frontend .span {
+    color: rgb(50, 54, 56);
+    font-size: 1.4em;
+    animation: darModeSpan 3s ease;
+}
+@keyframes darModeSpan {
+    0%{
+    color: var(--h2-darkmode);
+    }
+    100%{
+    color: rgb(50, 54, 56);
+    }
+}
+.habilidades .C_habilidades .habilities .backend ul li, .frontend ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.habilidades .C_habilidades .habilities .backend ul li i, .frontend ul li i {
+    font-size: 7em;
+}
+.habilidades .C_habilidades .habilities .backend ul li span, .frontend ul li span {
+    font-size: 1.4em;
+    margin-top: .4em;
+}
